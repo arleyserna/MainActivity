@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     public void Secondary(View view){
         Intent secondary = new Intent(this, SecondaryActivity.class);
         secondary.putExtra("dato", et1.getText().toString());
+        Toast.makeText(this,"Cambio de prueba", Toast.LENGTH_SHORT).show();
         startActivity(secondary);
     }
 }
